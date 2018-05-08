@@ -1,6 +1,6 @@
 # This is a sample of how to build the user-guide menu
 # Only main topics have icons
-- name: Introduction
+- name: Introduction2
   icon: intro
   path: user-guide/instructor-login.html
   subtopics:  

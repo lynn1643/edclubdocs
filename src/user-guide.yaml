@@ -1,0 +1,32 @@
+# This is a sample of how to build the user-guide menu
+# Only main topics have icons
+- name: Introduction
+  icon: intro
+  path: user-guide/instructor-login.html
+  subtopics:  
+    - name: Students
+      path: user-guide/add-students.html
+      subtopics:      
+        - name: Create Lesson Plans
+          path: user-guide/create-lesson-plans.html
+                              
+        - name: Create Accounts
+          path: user-guide/create-account.html        
+
+
+    - name: School Code
+      path: user-guide/school-code.html      
+      subtopics:      
+        - name: Ipad app
+          path: user-guide/install-ipad-app.html
+
+
+- name: Class Management
+  icon: class
+  path: user-guide/add-classes.html
+  subtopics:  
+    - name: Add Multiple Classes
+      path: user-guide/add-many-classes.html
+
+    - name: Lesson Types
+      path: user-guide/lesson-types.html  

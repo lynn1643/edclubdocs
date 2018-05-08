@@ -110,3 +110,15 @@ h1{
   color: #edb400;
 
 }
+
+.menu.active a {color: orange;}
+.menu.level-0 {
+    padding-top:    10px;
+    font-weight: bold;
+}
+.menu.level-1 {
+    padding-left: 15px;
+}
+.menu.level-2 {
+    padding-left: 30px;
+}

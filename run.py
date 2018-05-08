@@ -5,6 +5,7 @@ import os
 import sys
 from sys import argv
 from StringIO import StringIO
+from ruamel.yaml import YAML
 import glob
 try:
     from jinja2 import Template
@@ -13,13 +14,37 @@ except:
     from jinja2 import Template
 
 PROJ_DIR = os.path.abspath(os.path.dirname(__file__))
+yaml = YAML(typ='safe')
 
 class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def load_doc(self):
-        nav_files = glob.glob(os.path.join(PROJ_DIR, 'docs/user-guide/*'))
         raw_template = open(os.path.join(PROJ_DIR, 'src/index.html')).read()
         doc_body = open(os.path.join(PROJ_DIR, self.path.strip('/'))).read()
-        return Template(raw_template).render(doc_body=doc_body, nav=nav_files)
+
+        try:
+            menu = yaml.load(file(os.path.join(PROJ_DIR, 'src/user-guide.yaml')).read())
+        except Exception as e:
+            doc_body = "<h4>YAML Exception:</h4><p class='doc-warn'>%s</p>" % e
+            menu = []
+            
+        nav = []
+        def traverse_menu(menu, level=0):
+            for item in menu:
+                new_item = {
+                    'name': item['name'],
+                    'path': item['path'],
+                    'level': level
+                }
+                if 'icon' in item:
+                    new_item['icon'] = item['icon']
+                if self.path == "/docs/%s" % item['path']:  
+                    new_item['active'] = True
+                    
+                nav.append(new_item)
+                if 'subtopics' in item:
+                    traverse_menu(item['subtopics'], level+1)
+        traverse_menu(menu)
+        return Template(raw_template).render(doc_body=doc_body, nav=nav)
 
     def serve_doc(self):
         f = StringIO()

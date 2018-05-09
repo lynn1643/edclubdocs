@@ -20,6 +20,7 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def load_doc(self):
         raw_template = open(os.path.join(PROJ_DIR, 'src/index.html')).read()
         doc_body = open(os.path.join(PROJ_DIR, self.path.strip('/'))).read()
+        doc_body = Template(doc_body).render(EDCLUBDOCS="/src/")
 
         try:
             menu = yaml.load(file(os.path.join(PROJ_DIR, 'src/user-guide.yaml')).read())

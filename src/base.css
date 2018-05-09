@@ -5,26 +5,30 @@
     border-left: 4px solid #ccc;
     padding: 20px;
     margin-bottom: 1em;
+    margin-top: 1.5em;
 }
 
 .doc-notice {
     background: #F0F9FE;
     border-left: 4px solid #1C9AE7;
     padding: 20px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
 }
 
 .doc-notice b{
     display: inline-block;
     border-radius: 4px;
     padding: 0 4px;
+
 }
 
 .doc-warn {
     background: #FFFBDC;
     border-left: 4px solid #ffe76e;
     padding: 20px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
 }
 
 .doc-warn b{
@@ -37,7 +41,8 @@
     background: #EFFCF5;
     border-left: 4px solid #50C5A2;
     padding: 20px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
 }
 
 .doc-tip b{
@@ -82,32 +87,57 @@ pre code {
     border: 1px solid #ddd;
 }
 
-Mark{
+mark{
     background-color: #fff6a4;
 }
+
+mark.gray-mark{
+    background-color: #eee;
+}
+
 h1{
     margin-bottom:1.5em;
     color:#0698EA;
 }
- h2, h3, h4, h5, h6{
-    margin-bottom:0.8em;
+
+h2{
+   margin-bottom:1em; 
 }
+
+h3, h4{
+    margin-bottom:.7em;
+}
+
 .icon-pro:before {
   content: "\e906";
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: .7em;
 }
+
 .icon-free:before {
   content: "\e900";
   color: #4d4d4d;
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: .7em;
   
 }
+
 .icon-new:before {
   content: "\e901";
   color: #0698ea;
-  
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: .8em;
 }
+
 .icon-proplus:before {
-  content: "\e902";
+  content: "\e903";
   color: #edb400;
+   margin-left: 6px;
+  margin-right: 6px;
+  font-size: .7em;
 
 }
 
@@ -122,3 +152,28 @@ h1{
 .menu.level-2 {
     padding-left: 30px;
 }
+
+p{
+    line-height: 1.7em;
+}
+
+.tab{
+    background-color: #f7f7f7;
+    border:1px solid #c1c1c1;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+}
+
+.li-exeption{
+    margin-bottom: 8px;
+}
+.icon-right-arrow:before {
+  content: "\e902";
+  margin-left:5px;
+  margin-right:5px;
+  font-size: .8em;
+}
+

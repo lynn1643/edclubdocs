@@ -1,32 +1,210 @@
 # This is a sample of how to build the user-guide menu
 # Only main topics have icons
-- name: Introduction2
-  icon: intro
-  path: user-guide/instructor-login.html
+- name: User Guide
+  icon: user-guide
+  path: user-guide/index.html
   subtopics:  
-    - name: Students
-      path: user-guide/add-students.html
-      subtopics:      
-        - name: Create Lesson Plans
-          path: user-guide/create-lesson-plans.html
-                              
-        - name: Create Accounts
-          path: user-guide/create-account.html        
+    - name: Introduction
+      path: user-guide/introduction.html
+      subtopics:
+        - name: About TypingClub
+          path: user-guide/introduction/about-typingclub.html
+
+        - name: Keyboarding & Common Core
+          path: user-guide/introduction/keyboarding-common-core.html
+
+        - name: Best practices
+          path: user-guide/introduction/best-practices.html
+
+        - name: Technical Requirements
+          path: user-guide/introduction/technical-requirements.html  
 
 
-    - name: School Code
-      path: user-guide/school-code.html      
-      subtopics:      
-        - name: Ipad app
-          path: user-guide/install-ipad-app.html
+    - name: Account Setup
+      path: user-guide/account-setup.html
+      subtopics:
+        - name: Creating a TypingClub account
+          path: user-guide/account-setup/create-account.html
+
+        - name: School Code
+          path: user-guide/account-setup/school-code.html
+
+        - name: Installing a Chrome extension
+          path: user-guide/account-setup/chrome-extension.html
+
+        - name: Installing an iPad app
+          path: user-guide/account-setup/install-ipad-app.html 
+
+        - name: Manual vs. Automated setup
+          path: user-guide/account-setup/integrations.html 
+
+    - name: Teacher Setup        
+      path: user-guide/teacher-setup.html
+      subtopics:
+        - name: Adding instructors
+          path: user-guide/teacher-setup/add-instructors.html
+
+        - name: Instructor login
+          path: user-guide/teacher-setup/instructor-login.html 
+          
+        - name: How do instructors change passwords?
+          path: user-guide/teacher-setup/instructor-password.html 
+
+        - name: Instructor permissions
+          path: user-guide/teacher-setup/instructor-permissions.html 
+
+        - name: Multiple-school setup
+          path: user-guide/teacher-setup/add-many-schools.html 
+
+        - name: Adding school administrators
+          path: user-guide/teacher-setup/add-school-admin.html    
+
+    - name: Class & Student Setup        
+      path: user-guide/class-student-setup.html
+      subtopics:
+        - name: Adding many classes
+          path: user-guide/class-student-setup/add-many-classes.html
+
+        - name: Managing assignements
+          path: user-guide/class-student-setup/assigned-lesson-plans.html  
+
+        - name: Creating lesson plans 
+          path: user-guide/class-student-setup/create-lesson-plans.html
+
+        - name: Types of lessons
+          path: user-guide/class-student-setup/lesson-types.html  
+
+        - name: Adjusting lesson plan difficulty
+          path: user-guide/class-student-setup/adjust-lesson-plan-difficulty.html
+
+        - name: Adding students
+          path: user-guide/class-student-setup/add-students.html  
+
+        - name: Login instructions
+          path: user-guide/class-student-setup/student-login-cards.html
+
+        - name: Moving students between schools
+          path: user-guide/class-student-setup/move-student.html
+
+
+    - name: Managing class       
+      path: user-guide/managing-class.html
+      subtopics:
+        - name: Placement test
+          path: user-guide/managing-class/activate-placement-test.html
+
+        - name: Grading a typing class
+          path: user-guide/managing-class/grade-typing-class.html 
+
+        - name: Tracking student progress
+          path: user-guide/managing-class/track-progress.html
+
+        - name: Generating a parent letter
+          path: user-guide/managing-class/parent-letter.html   
 
 
 - name: Class Management
   icon: class
-  path: user-guide/add-classes.html
+  path: user-guide/class-management.html
   subtopics:  
-    - name: Add Multiple Classes
-      path: user-guide/add-many-classes.html
+    - name: Class creation
+      path: class-management/class-creation.html
+      subtopics:
+        - name: Adding classes
+          path: class-management/class-creation/add-classes.html
 
-    - name: Lesson Types
-      path: user-guide/lesson-types.html  
+        - name: Archive or disable classes
+          path: class-management/class-creation/disable-classes.html 
+
+        - name: Student login instructions
+          path: class-management/class-creation/student-login-cards.html
+
+        - name: Assign multiple instructors to classes
+          path: class-management/class-creation/.multiple-instructors.html  
+
+   
+    - name: Assignments
+      path: class-management/assignments.html
+      subtopics:
+        - name: Assign lesson plans
+          path: class-management/assignments/assign-lesson-plan.html
+
+        - name: Assign specific lessons
+          path: class-management/assignments/assign-lessons.html  
+
+        - name: Set dependency
+          path: class-management/assignments/lesson-plan-dependency.html
+
+    - name: Class settings
+      path: class-management/class-settings.html
+      subtopics:
+        - name: Prevent jumping around
+          path: class-management/class-settings/prevent-jumping-ahead.html
+
+        - name: Scoreboard
+          path: class-management/class-settings/scoreboard-settings.html
+
+        - name: Adjusting difficulty per student
+          path: class-management/class-settings/difficulty-per-student.html
+
+        - name: Changing time goals
+          path: class-management/class-settings/time-goals.html
+
+        - name: Minimum star requirement
+          path: class-management/class-settings/minimum-stars.html 
+
+        - name: Student settings control
+          path: class-management/class-settings/student-settings.html 
+
+        - name: Bulk-updating class settings
+          path: class-management/class-settings/bulk-class-settings.html
+
+        - name: Student progress overview
+          path: class-management/class-settings/student-progress-overview.html
+
+        - name: Use of backspace
+          path: class-management/class-settings/disable-backspace.html
+
+    - name: Typing tests
+      path: class-management/typing-tests.html
+      subtopics:
+        - name: Creating a test
+          path: class-management/typing-tests/typing-test.html
+
+        - name: Assigning a test 
+          path: class-management/typing-tests/assign-test.html
+
+        - name: Certificates of completion
+          path: class-management/typing-tests/certificates.html
+
+        - name: Activating placement tests
+          path: class-management/typing-tests/activate-placement-test.html
+
+- name: Student management
+  icon: class
+  path: user-guide/student-management.html
+  subtopics:  
+    - name: Student account setup
+      path: student-management/student-account-setup.html
+      subtopics:
+        - name: Adding a single student
+          path: student-management/student-account-setup.html/add-student.html
+
+        - name: Adding multiple students
+          path: student-management/student-account-setup.html/add-students.html
+  
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+ 

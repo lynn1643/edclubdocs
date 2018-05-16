@@ -143,17 +143,18 @@ h3, h4{
 
 .menu.active a {color: orange;}
 .menu.level-0 {
-    padding-top:    10px;
+    padding-top: 10px;
     font-weight: bold;
 }
 .menu.level-1 {
-    padding-left: 15px;
+    padding-left: 5px;
 }
 .menu.level-2 {
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
-.menu.level-1 + .subtopics {display: none;}
+.subtopics {margin-left: 15px;}
+.menu.level-1 + .subtopics {display: none; border-left: solid 1px #ccc; margin: 5px 0; margin-left: 15px;}
 .menu.level-1.has-active + .subtopics, .menu.level-1.active + .subtopics {display: block;}
 .menu.level-1.has-active a {text-decoration: underline;}
 

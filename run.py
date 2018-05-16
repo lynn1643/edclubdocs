@@ -29,7 +29,9 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             menu = []
             
         nav = []
+        navbar = {}
         def traverse_menu(menu, level=0):
+            has_active = False
             for item in menu:
                 new_item = {
                     'name': item['name'],
@@ -40,12 +42,25 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
                     new_item['icon'] = item['icon']
                 if self.path == "/docs/%s" % item['path']:  
                     new_item['active'] = True
-                    
+                    navbar['current'] = self.path
+                    has_active = True
+                else:
+                    if navbar.get('current'):
+                        if not navbar.get('next'):
+                            navbar['next'] = "/docs/%s" % item['path']
+                    else:
+                        navbar['prev']= "/docs/%s" % item['path']                
                 nav.append(new_item)
                 if 'subtopics' in item:
-                    traverse_menu(item['subtopics'], level+1)
+                    nav.append({'in': True})
+                    if traverse_menu(item['subtopics'], level+1):
+                        new_item['has_active'] = True                        
+                    nav.append({'out': True})
+
+            return has_active
+
         traverse_menu(menu)
-        return Template(raw_template).render(doc_body=doc_body, nav=nav)
+        return Template(raw_template).render(doc_body=doc_body, navbar=navbar, nav=nav)
 
     def serve_doc(self):
         f = StringIO()

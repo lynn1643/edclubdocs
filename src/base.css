@@ -153,6 +153,10 @@ h3, h4{
     padding-left: 30px;
 }
 
+.menu.level-1 + .subtopics {display: none;}
+.menu.level-1.has-active + .subtopics, .menu.level-1.active + .subtopics {display: block;}
+.menu.level-1.has-active a {text-decoration: underline;}
+
 p{
     line-height: 1.7em;
 }

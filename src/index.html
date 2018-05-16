@@ -27,10 +27,20 @@
         <div class="row">
             <div class="col-md-4">
 				{%  for i in nav %}
-					<div class="menu level-{{ i.level }} {% if i.active %}active{% endif %}"><a href="/docs/{{ i.path }}">{{i.name}}</a></div>
+					{% if i.in %}<div class="subtopics">{% elif i.out %}</div>
+					{% else %}	
+						<div class="menu level-{{ i.level }} {% if i.active %}active{% endif %} {% if i.has_active %}has-active{% endif %}"><a href="/docs/{{ i.path }}">{{i.name}}</a></div>
+					{% endif %}
 				{% endfor %}
             </div>
-            <div class="col-md-8">{{ doc_body }}</div>
+            <div class="col-md-8">
+				<div>
+					{% if navbar.prev %}<a href="{{ navbar.prev }}">&lt; Previous</a>{% endif %}
+					&nbsp;
+					{% if navbar.next %}<a href="{{ navbar.next }}" style="float: right">Next &gt;</a>{% endif %}
+				</div>
+				<div>{{ doc_body }}</div>
+			</div>
         </div>
     </div>
 </body>

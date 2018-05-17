@@ -141,7 +141,11 @@ h3, h4{
 
 }
 
-.menu.active a {color: orange;}
+.menu.active {border-left: solid 2px; orange; color: black;}
+.menu.active a {color: #00478a;}
+.menu.is_active {border: none;}
+.menu.is_active a {color: orange;}
+
 .menu.level-0 {
     padding-top: 10px;
     font-weight: bold;
@@ -155,7 +159,7 @@ h3, h4{
 
 .subtopics {margin-left: 15px;}
 .menu.level-1 + .subtopics {display: none; border-left: solid 1px #ccc; margin: 5px 0; margin-left: 15px;}
-.menu.level-1.has-active + .subtopics, .menu.level-1.active + .subtopics {display: block;}
+.menu.level-1.has-active + .subtopics, .menu.level-1.is_active + .subtopics {display: block;}
 .menu.level-1.has-active a {text-decoration: underline;}
 
 p{
@@ -182,3 +186,6 @@ p{
   font-size: .8em;
 }
 
+#doc-sidemenu.affix {top: 20px;}
+#doc-sidemenu.affix-bottom {position: absolute;}
+#doc-sidemenu a {padding: 0;}

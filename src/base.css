@@ -104,8 +104,12 @@ h2{
    margin-bottom:1em; 
 }
 
-h3, h4{
-    margin-bottom:.7em;
+h3{
+    margin-bottom:1em;
+}
+
+h4{
+    margin-bottom:1em;
 }
 
 .icon-pro:before {

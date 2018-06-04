@@ -103,7 +103,7 @@
 
 - name: Class Management
   icon: class
-  path: user-guide/class-management.html
+  path: class-management/index.html
   subtopics:  
     - name: Class creation
       path: class-management/class-creation.html
@@ -118,7 +118,7 @@
           path: class-management/class-creation/student-login-cards.html
 
         - name: Assign multiple instructors to classes
-          path: class-management/class-creation/.multiple-instructors.html  
+          path: class-management/class-creation/multiple-instructors.html  
 
    
     - name: Assignments
@@ -136,8 +136,8 @@
     - name: Class settings
       path: class-management/class-settings.html
       subtopics:
-        - name: Prevent jumping around
-          path: class-management/class-settings/prevent-jumping-ahead.html
+        - name: Jump-ahead behavior
+          path: class-management/class-settings/jump-ahead-behavior.html
 
         - name: Scoreboard
           path: class-management/class-settings/scoreboard-settings.html

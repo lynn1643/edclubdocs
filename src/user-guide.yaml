@@ -136,13 +136,11 @@
     - name: Class settings
       path: class-management/class-settings.html
       subtopics:
-        - name: Jump-ahead behavior
-          path: class-management/class-settings/jump-ahead-behavior.html
 
-        - name: Scoreboard
+        - name: Scoreboard visibility
           path: class-management/class-settings/scoreboard-settings.html
 
-        - name: Adjusting difficulty per student
+        - name: Adjusting individual difficulty
           path: class-management/class-settings/difficulty-per-student.html
 
         - name: Changing time goals
@@ -154,13 +152,16 @@
         - name: Student settings control
           path: class-management/class-settings/student-settings.html 
 
-        - name: Bulk-updating class settings
+        - name: Bulk-update class settings
           path: class-management/class-settings/bulk-class-settings.html
 
         - name: Student progress overview
           path: class-management/class-settings/student-progress-overview.html
 
-        - name: Use of backspace
+        - name: Jump-ahead behavior
+          path: class-management/class-settings/jump-ahead-behavior.html
+
+        - name: Backspace behavior
           path: class-management/class-settings/disable-backspace.html
 
     - name: Typing tests
@@ -175,8 +176,11 @@
         - name: Certificates of completion
           path: class-management/typing-tests/certificates.html
 
-        - name: Activating placement tests
-          path: class-management/typing-tests/activate-placement-test.html
+        - name: Activate placement test
+          path: class-management/typing-tests/activate-placement.html
+
+        - name: Create placement test
+          path: class-management/typing-tests/create-placement.html
 
 - name: Student management
   icon: class

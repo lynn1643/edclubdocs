@@ -16,17 +16,17 @@
         - name: Best practices
           path: user-guide/introduction/best-practices.html
 
-        - name: Technical Requirements
+        - name: Technical requirements
           path: user-guide/introduction/technical-requirements.html  
 
 
-    - name: Account Setup
+    - name: Account setup
       path: user-guide/account-setup.html
       subtopics:
         - name: Creating a TypingClub account
           path: user-guide/account-setup/create-account.html
 
-        - name: Manual vs. Automated Rostering
+        - name: Manual vs. Automated rostering
           path: user-guide/account-setup/manual-automated-rostering.html
 
         - name: Installing a Chrome extension
@@ -35,10 +35,10 @@
         - name: Installing an iPad app
           path: user-guide/account-setup/install-ipad-app.html 
 
-        - name: School Code
+        - name: School code
           path: user-guide/account-setup/school-code.html           
 
-    - name: Teacher Setup        
+    - name: Teacher setup        
       path: user-guide/teacher-setup.html
       subtopics:
         - name: Adding instructors
@@ -57,7 +57,7 @@
           path: user-guide/teacher-setup/school-admin.html 
    
 
-    - name: Class & Student Setup        
+    - name: Class & Student setup        
       path: user-guide/class-student-setup.html
       subtopics:
         - name: Creating classes
@@ -85,7 +85,7 @@
           path: user-guide/class-student-setup/move-student.html
 
 
-    - name: Class Preparation       
+    - name: Class preparation       
       path: user-guide/class-preparation.html
       subtopics:
         - name: Placement test
@@ -101,7 +101,7 @@
           path: user-guide/class-preparation/parent-letter.html   
 
 
-- name: Class Management
+- name: Class management
   icon: class
   path: class-management/index.html
   subtopics:  
@@ -194,8 +194,47 @@
 
         - name: Adding multiple students
           path: student-management/student-account-setup.html/add-students.html
-  
 
+- name: Reports
+  icon: reports
+  path: reports/index.html
+  subtopics:  
+    - name: Practice time
+      path: reports/practice-time.html  
+
+    - name: Typing speed
+      path: reports/typing-speed.html  
+
+    - name: Typing accuracy
+      path: reports/typing-accuracy.html
+
+    - name: Overall progress
+      path: reports/overall-progress.html  
+
+    - name: Keyboard coverage
+      path: reports/keyboard-coverage.html  
+
+    - name: Badges
+      path: reports/badges.html    
+      
+
+
+
+- name: FAQ
+  icon: faq
+  path: faq/index.html
+  subtopics:  
+    - name: Licensing &amp; Purchasing
+      path: faq/licensing-purchasing.html
+
+    - name: Login help
+      path: faq/login-questions.html  
+
+    - name: General inquires
+      path: faq/general-inquires.html 
+
+    - name: Back to school
+      path: faq/new-year-prep.html
 
 
 

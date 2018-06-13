@@ -178,20 +178,30 @@
         - name: Activating placement tests
           path: class-management/typing-tests/activate-placement-test.html
 
-- name: Student management
-  icon: class
-  path: user-guide/student-management.html
+- name: Student Management
+  icon: student
+  path: user-guide/student-management/student-management.html
   subtopics:  
     - name: Student account setup
-      path: student-management/student-account-setup.html
+      path: user-guide/student-management/student-account-setup/student-account-setup.html
       subtopics:
-        - name: Adding a single student
-          path: student-management/student-account-setup.html/add-student.html
+        - name: Adding one student
+          path: user-guide/student-management/student-account-setup/add-one-student.html
 
         - name: Adding multiple students
-          path: student-management/student-account-setup.html/add-students.html
-  
+          path: user-guide/class-student-setup/add-students.html
 
+        - name: Enrolling students in classes
+          path: user-guide/student-management/student-account-setup/enroll-students.html
+
+        - name: Using class codes
+          path: user-guide/student-management/student-account-setup/class-codes.html
+
+    - name: Student information management
+      path: user-guide/student-management/student-info-management/student-info-management.html
+      subtopics:
+        - name: Exporting student list
+          path: user-guide/student-management/student-info-management/export-student-csv.html
 
 
 

@@ -60,7 +60,7 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             return has_active
 
         traverse_menu(menu)
-        return Template(raw_template).render(doc_body=doc_body, navbar=navbar, nav=nav)
+        return Template(raw_template).render(doc_body=doc_body, navbar=navbar, nav=nav, EDC_SRC="/src/", EDC_DOCS="/docs/")
 
     def serve_doc(self):
         f = StringIO()

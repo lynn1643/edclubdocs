@@ -39,9 +39,107 @@
 					&nbsp;
 					{% if navbar.next %}<a href="{{ navbar.next }}" style="float: right">Next &gt;</a>{% endif %}
 				</div>
+				<div style="position: relative; height: 60px;">
+					<div style="z-index: 1; position: absolute; width: 100%; padding: 10px 0; background: white;">
+						<input class="form-control form-inline" placeholder="Search" onblur="onBlur()" oninput="onSearch(this)" type="text"/>
+						<img id="search-spinner" src="{{ EDC_SRC }}media/loading.gif" style="display: none; position: absolute; top: 25px; right: 10px; width: 30px"/>
+						<div id="search-results" style="display: none; padding: 10px 15px; background: #f5f5f5; margin-bottom: -10px; box-shadow: 0 5px 5px #333;"></div>
+					</div>	
+				</div>
 				<div>{{ doc_body }}</div>
 			</div>
         </div>
     </div>
+
+	<script>
+		var searchResults = document.getElementById('search-results');
+		var searchSpinner = document.getElementById('search-spinner');
+		var searchTimeout;
+		function callAjax(url, callback){
+			var xmlhttp;
+			// compatible with IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function(){
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					callback(xmlhttp.responseText);
+				}
+			}
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+		
+		var search_index;
+		var search_tokens;
+		
+		function onBlur() {setTimeout(function(){searchResults.style.display = 'none';}, 100);}
+		
+		function onSearch(e) {
+		    
+		    searchSpinner.style.display = 'block';
+		    if (searchTimeout) {clearTimeout(searchTimeout); searchTimeout = null;}
+		    searchTimeout = setTimeout(function () {searchSpinner.style.display = 'none';searchTimeout = null;}, 500);
+		    
+		    var query = e.value;
+		    if (search_index) search(query);
+		    else callAjax('{{ EDC_SRC }}/index.json', function(data) {
+		        search_index = JSON.parse(data);
+		        var ts = search_index.tokens;
+		        search_tokens = Object.keys(ts).sort(function(a,b) {
+		            return ts[a].length > ts[b].length?-1:1; 
+		        });
+		        search(query);
+			})
+		}
+		
+		function search(query) {
+            var terms = query.toLowerCase().split(/\s/);
+            var last_term = terms.pop();
+            var token_items = [];
+            for (var i in terms) {
+                if (search_index.tokens[terms[i]]) token_items.push(search_index.tokens[terms[i]].split(' '));
+            }
+            if (last_term.length > 1) {
+                var last_terms = [];
+                var r = new RegExp('\\s(' + last_term + '.*?)\\s', 'g');
+                var glossary = ' ' + search_tokens.join(' ') + ' ';
+                var suggestions = (glossary.match(r) || []).map(function (e) {
+                    return e.trim();
+                });
+                for (var i in suggestions) {
+                    var docs = search_index.tokens[suggestions[i]].split(' ');
+                    for (var j in docs) if (last_terms.indexOf(docs[j])<0) last_terms.push(docs[j]);
+                }
+                if (last_terms.length) token_items.push(last_terms);
+            } else {
+               if (search_index.tokens[last_term]) token_items.push(search_index.tokens[last_term].split(' ')); 
+			}
+
+            //intersect lists
+            var longest = [];
+            for (var i in token_items) {
+                var docs = token_items[i];
+                if (docs.length > longest.length) longest = docs;
+            }
+            var token_hist = {};
+            for (var i in token_items) {
+                var docs = token_items[i];
+                for (var j in docs) token_hist[docs[j]] = (token_hist[docs[j]] || 0) + 1;
+            }
+            var res = [], min_matches=token_items.length;
+            while (res.length < 15 && min_matches>0) {
+                for (var i in longest) {
+                    if (token_hist[longest[i]] == min_matches) {
+                        var item = search_index.items[longest[i]];
+                        if (res.length <= 15) res.push('<a style="display: block" href="{{ EDC_DOCS }}' + item.p + '">' + item.n + "</a>");
+                    }
+                }
+                min_matches--;
+            }
+            if (res.length) searchResults.style.display = 'block';
+            else searchResults.style.display = 'none';
+            
+            searchResults.innerHTML = res.join('');
+        }
+	</script>
 </body>
 </html>

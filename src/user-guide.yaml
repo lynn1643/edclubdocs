@@ -73,7 +73,7 @@
           path: user-guide/class-student-setup/lesson-types.html  
 
         - name: Adjusting lesson plan difficulty
-          path: user-guide/class-student-setup/adjust-lesson-plan-difficulty.html
+          path: user-guide/class-student-setup/lesson-plan-difficulty.html
 
         - name: Adding students
           path: user-guide/class-student-setup/add-students.html  
@@ -206,6 +206,60 @@
       subtopics:
         - name: Exporting student list
           path: user-guide/student-management/student-info-management/export-student-csv.html
+
+        - name: Removing students
+          path: user-guide/student-management/student-info-management/remove-students.html
+
+        - name: Moving students within your account
+          path: user-guide/student-management/student-info-management/change-student-school.html
+
+        - name: Moving students up one grade
+          path: user-guide/student-management/student-info-management/up-one-grade.html
+
+    - name: Student login options
+      path: user-guide/student-management/student-login-options/student-login-options.html
+      subtopics:
+        - name: Getting students logged in
+          path: user-guide/student-management/student-login-options/student-login.html
+
+        - name: Logging in with Google
+          path: user-guide/student-management/student-login-options/login-google.html
+
+        - name: Distributing student login instructions
+          path: user-guide/student-management/student-login-options/student-login-instructions.html
+
+        - name: Checking student login credentials
+          path: user-guide/student-management/student-settings/check-student-info.html
+
+    - name: Student settings
+      path: user-guide/student-management/student-settings/student-settings.html
+      subtopics: 
+        - name: Changing student settings
+          path: user-guide/student-management/student-settings/change-student-settings.html
+
+        - name: Accessibility settings
+          path: user-guide/student-management/student-settings/accessibility-settings.html
+
+        - name: Adjusting lesson difficulty
+          path: user-guide/student-management/student-settings/lesson-difficulty.html
+
+    - name: Tracking progress
+      path: user-guide/student-management/track-progress/tracking-progress.html
+      subtopics:
+        - name: Changing time goals
+          path: user-guide/student-management/track-progress/time-goals.html
+
+        - name: Adjusting the minimum star requirements
+          path: user-guide/student-management/track-progress/minimum-stars.html
+
+        - name: Managing the student view of the scoreboard
+          path: user-guide/student-management/track-progress/scoreboard-settings.html
+
+        - name: Understanding the results page
+          path: user-guide/student-management/track-progress/results-page.html
+
+        - name: Missing student progress
+          path: user-guide/student-management/track-progress/missing-progress.html
 
 - name: Reports
   icon: reports

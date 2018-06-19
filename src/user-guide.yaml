@@ -73,7 +73,7 @@
           path: user-guide/class-student-setup/lesson-types.html  
 
         - name: Adjusting lesson plan difficulty
-          path: user-guide/class-student-setup/adjust-lesson-plan-difficulty.html
+          path: user-guide/class-student-setup/lesson-plan-difficulty.html
 
         - name: Adding students
           path: user-guide/class-student-setup/add-students.html  

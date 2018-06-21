@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ya2szo');
-  src:  url('fonts/icomoon.eot?ya2szo#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ya2szo') format('truetype'),
-    url('fonts/icomoon.woff?ya2szo') format('woff'),
-    url('fonts/icomoon.svg?ya2szo#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ju6ypj');
+  src:  url('fonts/icomoon.eot?ju6ypj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?ju6ypj') format('woff2'),
+    url('fonts/icomoon.ttf?ju6ypj') format('truetype'),
+    url('fonts/icomoon.woff?ju6ypj') format('woff'),
+    url('fonts/icomoon.svg?ju6ypj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,21 +24,43 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-free:before {
+  content: "\e900";
+  color: #4d4d4d;
+}
 .icon-new:before {
   content: "\e901";
   color: #0698ea;
 }
-.icon-right-arrow:before {
+.icon-pro:before {
   content: "\e902";
 }
 .icon-proplus:before {
   content: "\e903";
   color: #f7b000;
 }
-.icon-free:before {
-  content: "\e900";
-  color: #4d4d4d;
+.icon-right-arrow:before {
+  content: "\e904";
 }
-.icon-pro:before {
+.icon-tutorial:before {
+  content: "\e905";
+}
+.icon-class-management:before {
   content: "\e906";
+}
+.icon-faq:before {
+  content: "\e907";
+}
+.icon-reports:before {
+  content: "\e908";
+}
+.icon-resources:before {
+  content: "\e909";
+}
+.icon-student-management:before {
+  content: "\e90a";
+}
+.icon-user-guide:before {
+  content: "\e90b";
 }

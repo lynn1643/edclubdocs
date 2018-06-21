@@ -113,7 +113,7 @@ h4{
 }
 
 .icon-pro:before {
-  content: "\e906";
+  content: "\e902";
   margin-left: 6px;
   margin-right: 6px;
   font-size: .7em;
@@ -124,7 +124,7 @@ h4{
   color: #4d4d4d;
   margin-left: 6px;
   margin-right: 6px;
-  font-size: .7em;
+  font-size: .8em;
   
 }
 
@@ -143,6 +143,30 @@ h4{
   margin-right: 6px;
   font-size: .7em;
 
+}
+.icon-class-management:before {
+  content: "\e906";
+  font-size: 100px;
+}
+.icon-faq:before {
+  content: "\e907";
+  font-size: 100px;
+}
+.icon-reports:before {
+  content: "\e908";
+  font-size: 100px;
+}
+.icon-resources:before {
+  content: "\e909";
+  font-size: 100px;
+}
+.icon-student-management:before {
+  content: "\e90a";
+  font-size: 100px;
+}
+.icon-user-guide:before {
+  content: "\e90b";
+  font-size: 100px;
 }
 
 .menu.active {border-left: solid 2px; orange; color: black;}
@@ -184,7 +208,7 @@ p{
     margin-bottom: 8px;
 }
 .icon-right-arrow:before {
-  content: "\e902";
+  content: "\e904";
   margin-left:5px;
   margin-right:5px;
   font-size: .8em;

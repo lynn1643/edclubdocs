@@ -144,51 +144,47 @@ h4{
   font-size: .7em;
 
 }
-.icon-class-management:before {
-  content: "\e906";
-  font-size: 100px;
-}
-.icon-faq:before {
-  content: "\e907";
-  font-size: 100px;
-}
-.icon-reports:before {
-  content: "\e908";
-  font-size: 100px;
-}
-.icon-resources:before {
-  content: "\e909";
-  font-size: 100px;
-}
-.icon-student-management:before {
-  content: "\e90a";
-  font-size: 100px;
-}
-.icon-user-guide:before {
-  content: "\e90b";
-  font-size: 100px;
-}
 
-.menu.active {border-left: solid 2px; orange; color: black;}
-.menu.active a {color: #00478a;}
-.menu.is_active {border: none;}
-.menu.is_active a {color: orange;}
+/*.menu.active {border-left: solid 2px; orange; color: black;}*/
+.menu a {
+    font-size: 14px;
+    padding: 6px 5px 6px 50px!important;
+    color: #333;
+}
+.menu a:hover {background-color: inherit!important; color: #1d91ed;} 
 
-.menu.level-0 {
-    padding-top: 10px;
+.menu.level-0.is-active>a {
     font-weight: bold;
+    border-right: solid 2px #1d91ed;
 }
-.menu.level-1 {
-    padding-left: 5px;
+.menu.level-0>a>i {position: absolute; left: 18px; font-size: 20px; top: 5px; z-index: 1;}
+
+.menu.level-1.active>a {color: #1d91ed;}
+.menu.level-1>.nav {position: relative;}
+.menu.level-1>.nav>.line {color: #888; position: absolute; border-left: dotted 1px; left: 64px; height: calc(100% - 30px); top: 15px;}
+.menu.level-2>a {padding-left: 74px!important;}
+.menu.level-2>a:before {
+    position: absolute;
+    content: '\00B0';
+    top: 13px;
+    left: 60px;
+    font-size: 1.7em;
+    line-height: 1em;
+    background: white;
+    height: 9px;
 }
-.menu.level-2 {
-    padding-left: 10px;
-}
+.menu.level-2.active>a {color: #1d91ed;}
+
+.menu>.nav {display: none;}
+.menu.level-0>.nav {display: block;}
+.menu.active>.nav {display: block;}
+.menu.active>a {border-right: solid 2px #1d91ed;}
+.menu.has-active>a {border-right: none!important;}
 
 .subtopics {margin-left: 15px;}
 .menu.level-1 + .subtopics {display: none; border-left: solid 1px #ccc; margin: 5px 0; margin-left: 15px;}
 .menu.level-1.has-active + .subtopics, .menu.level-1.is_active + .subtopics {display: block;}
-.menu.level-1.has-active a {text-decoration: underline;}
+/*.menu.level-1.has-active a {text-decoration: underline;}*/
 
 p{
     line-height: 1.7em;
@@ -214,6 +210,29 @@ p{
   font-size: .8em;
 }
 
-#doc-sidemenu.affix {top: 20px;}
+#doc-sidemenu {position: absolute; padding-top: 46px; width: 25vw; min-height: 100vh; border-right: solid 1px #e6e6e6;}
+#doc-sidemenu.affix {top: 0; position: fixed;}
+#doc-sidemenu>.back-to-top {display: none;}
+#doc-sidemenu.affix>.back-to-top {display: block;}
 #doc-sidemenu.affix-bottom {position: absolute;}
-#doc-sidemenu a {padding: 0;}
+
+*, h1, h2, h3, h4, h5, p {font-weight: 400;}
+
+.sm-back-to-top {height: 0; overflow: hidden; background: #fdfdfd; }
+.sm-back-to-top.affix {display: block; height: inherit; padding: 10px; z-index: 1; border-bottom: solid 1px #ededed;}
+
+.chapter-tile {
+    display: inline-block; 
+    width: 210px; 
+    margin: 17px;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: top;
+    text-decoration: none!important;
+}
+.chapter-tile:hover .home-icon {transform: scale(1.1);}
+
+.home-link {color: #4d4d4d;}
+.home-link:hover {text-decoration: none; color: #127fc4}
+.article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
+.article.active {opacity: 1;}

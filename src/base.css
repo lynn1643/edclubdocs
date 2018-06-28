@@ -240,8 +240,34 @@ p{
 .chapter-tile:hover .home-icon {transform: scale(1.1);}
 
 .home-link {color: #4d4d4d; display: block; font-size: 16px; line-height: 2.2;}
-.home-link:hover {text-decoration: none; color: #127fc4}
+.home-link:hover {text-decoration: none; color: #127fc4;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
 .article.active {opacity: 1;}
 
 .search-no-results {color: #888; letter-spacing: .01em;}
+
+.faq-list>p {display: none;}
+.faq-list>h5.open + p {display: block;}
+
+.faq-list>h5:hover {
+    cursor: pointer;
+    color: #127fc4;
+}
+.faq-list>h5:before {
+    content: '>';
+    width: 20px;
+    display: inline-block;
+    padding-right: 10px;
+}
+.faq-list>h5.open:before {
+    content: 'v';
+}
+#faq-list>h5:first-child {border-top: none;}
+#faq-list>h5 {
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 10px 0;
+    margin: 0;
+    border-top: solid 1px #ededed;
+}
+#faq-list>p {margin-bottom: 20px; padding-left: 20px;}

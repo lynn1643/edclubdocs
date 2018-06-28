@@ -26,12 +26,29 @@
     <div class="container" style='padding-top: 40px;'>
         <div class="row">
             <div class="col-md-4">
-				{%  for i in nav %}
-					{% if i.in %}<div class="subtopics">{% elif i.out %}</div>
-					{% else %}	
-						<div class="menu level-{{ i.level }} {% if i.active %}is_active{% endif %} {% if i.has_active %}has-active{% endif %}"><a href="/docs/{{ i.path }}">{{i.name}}</a></div>
-					{% endif %}
-				{% endfor %}
+				<div id="doc-sidemenu" class="hidden-xs nav d-none d-md-block" data-spy="affix" data-offset-top="55" data-offset-bottom="650">
+					<ul class="nav">
+						{% for chapter in menu %}
+							<li class="menu level-0 {{ chapter.active }}" style="position: relative; width: 100%; line-height: 2;">
+								<a href="{{ chapter.path }}"><i class="icon-{{ chapter.icon }}"></i>{{chapter.name}}</a>
+								<ul class="nav">
+									{% for topic in chapter.subtopics %}
+										<li class="menu level-1 {{ topic.active }}"><a href="{{ topic.path }}">{{topic.name}}</a>
+											{% if topic.subtopics %}
+												<ul class="nav">
+													<div class="line"></div>
+													{% for section in topic.subtopics %}
+														<li class="menu level-2 {{ section.active }}"><a href="{{ section.path }}">{{section.name}}</a></li>
+													{% endfor %}
+												</ul>
+											{% endif %}
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
             </div>
             <div class="col-md-8">
 				<div>

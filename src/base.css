@@ -116,7 +116,7 @@ h4{
   content: "\e902";
   margin-left: 6px;
   margin-right: 6px;
-  font-size: .7em;
+  font-size: 0.7em;
 }
 
 .icon-free:before {
@@ -124,7 +124,7 @@ h4{
   color: #4d4d4d;
   margin-left: 6px;
   margin-right: 6px;
-  font-size: .8em;
+  font-size: 0.7em;
   
 }
 
@@ -133,7 +133,7 @@ h4{
   color: #0698ea;
   margin-left: 6px;
   margin-right: 6px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .icon-proplus:before {
@@ -141,7 +141,7 @@ h4{
   color: #edb400;
    margin-left: 6px;
   margin-right: 6px;
-  font-size: .7em;
+  font-size: 0.7em;
 
 }
 .icon-class-management:before {

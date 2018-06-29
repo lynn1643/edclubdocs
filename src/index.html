@@ -64,6 +64,26 @@
 					</div>	
 				</div>
 				<div>{{ doc_body }}</div>
+
+				{% if navbar.current and navbar.current.subtopics %}
+					<div class="edclubdocs-toc">
+						{% for topic in navbar.current.subtopics %}
+							{% if topic.subtopics %}
+								<div>
+									<h2>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h2>
+									{% for section in topic.subtopics %}
+										<h4><a href="{{ section.path }}">{{ section.name }}</a></h4>
+									{% endfor %}
+								</div>
+							{% else %}
+								<div>
+									<h3>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h3>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				{% endif %}
+			
 			</div>
         </div>
     </div>

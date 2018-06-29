@@ -36,7 +36,7 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
                 item['active'] = ''
                 if self.path == item['path']:
                     item['active'] = 'active'
-                    navbar['current'] = self.path
+                    navbar['current'] = item
                     has_active = True
                 else:
                     if navbar.get('current'):

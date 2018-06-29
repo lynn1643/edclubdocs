@@ -271,3 +271,14 @@ p{
     border-top: solid 1px #ededed;
 }
 #faq-list>p {margin-bottom: 20px; padding-left: 20px;}
+
+.edclubdocs-toc {padding: 20px 0;}
+.edclubdocs-toc>div{
+    padding: 10px 5px 30px 15%;
+    border-top: solid 1px #e6e6e6;
+}
+.edclubdocs-toc>div:first-child {border-top: none;}
+.edclubdocs-toc a:hover {color: #127fc4;}
+.edclubdocs-toc h4 {padding-left: 40px; margin: 0;}
+.edclubdocs-toc h3 {margin: 5px 0 -15px;font-size: 22px;}
+.edclubdocs-toc h2 {font-size: 28px; margin: 0; font-weight: 500;}

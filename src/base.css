@@ -164,6 +164,7 @@ h4{
     border-right: solid 2px #1d91ed;
 }
 .menu.level-0>a>i {position: absolute; left: 18px; font-size: 20px; top: 5px; z-index: 1;}
+.menu.level-0.active>a>i {font-weight: 600;}
 
 .menu.level-1.active>a {color: #1d91ed;}
 .menu.level-1>.nav {position: relative;}
@@ -221,6 +222,7 @@ p{
 #doc-sidemenu.affix>.back-to-top {display: block;}
 #doc-sidemenu.affix-bottom {position: absolute;}
 
+.content-box {min-height: calc(100vh - 55px);}
 @media (min-width: 768px) {
     .content-box {
         margin-left: 5px;
@@ -246,37 +248,42 @@ p{
 .chapter-tile:hover .home-icon {transform: scale(1.1);}
 
 .home-link {color: #4d4d4d; display: block; font-size: 16px; line-height: 2.2;}
-.home-link:hover {text-decoration: none; color: #127fc4;}
+.home-link:hover {text-decoration: none; color: #1d91ed;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
 .article.active {opacity: 1;}
 
 .search-no-results {color: #888; letter-spacing: .01em;}
 
 .faq-list>p {display: none;}
-.faq-list>h5.open + p {display: block;}
-
 .faq-list>h5:hover {
     cursor: pointer;
-    color: #127fc4;
+    color: #1d91ed;
 }
 .faq-list>h5:before {
-    content: '>';
+    content: '\e90e';
     width: 20px;
     display: inline-block;
     padding-right: 10px;
+    font-family: 'icomoon';
+    padding: 0 4px;
+    font-size: 13px;
 }
+.faq-list>h5.open {color: #1d91ed;}
 .faq-list>h5.open:before {
-    content: 'v';
+    content: '\e90d';
+    font-size: 7px;
+    vertical-align: middle;
+    padding: 0 0 4px 0;
 }
 #faq-list>h5:first-child {border-top: none;}
 #faq-list>h5 {
     font-size: 20px;
     line-height: 1.4;
-    padding: 10px 0;
+    padding: 15px 0;
     margin: 0;
     border-top: solid 1px #ededed;
 }
-#faq-list>p {margin-bottom: 20px; padding-left: 20px;}
+#faq-list>p {margin-bottom: 30px; padding-left: 20px;}
 
 .edclubdocs-toc {padding: 20px 0;}
 .edclubdocs-toc>div{
@@ -284,7 +291,7 @@ p{
     border-top: solid 1px #e6e6e6;
 }
 .edclubdocs-toc>div:first-child {border-top: none;}
-.edclubdocs-toc a:hover {color: #127fc4;}
-.edclubdocs-toc h4 {padding-left: 40px; margin: 0;}
+.edclubdocs-toc a:hover {color: #1d91ed;}
+.edclubdocs-toc h5 {font-size:16px; padding-left: 40px; margin: 8px 0;}
 .edclubdocs-toc h3 {margin: 5px 0 -15px;font-size: 22px;}
-.edclubdocs-toc h2 {font-size: 28px; margin: 0; font-weight: 500;}
+.edclubdocs-toc h2 {font-size: 28px; margin: 0 0 20px; font-weight: 500;}

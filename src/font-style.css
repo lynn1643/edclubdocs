@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?bx7sxt');
-  src:  url('fonts/icomoon.eot?bx7sxt#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?bx7sxt') format('woff2'),
-    url('fonts/icomoon.ttf?bx7sxt') format('truetype'),
-    url('fonts/icomoon.woff?bx7sxt') format('woff'),
-    url('fonts/icomoon.svg?bx7sxt#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?prrcvd');
+  src:  url('fonts/icomoon.eot?prrcvd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?prrcvd') format('woff2'),
+    url('fonts/icomoon.ttf?prrcvd') format('truetype'),
+    url('fonts/icomoon.woff?prrcvd') format('woff'),
+    url('fonts/icomoon.svg?prrcvd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -44,6 +44,12 @@
   content: "\e903";
   color: #f7b000;
 }
+.icon-caret-down:before {
+  content: "\e90d";
+}
+.icon-caret-right:before {
+  content: "\e90e";
+}
 .icon-right-arrow:before {
   content: "\e904";
 }
@@ -67,4 +73,7 @@
 }
 .icon-user-guide:before {
   content: "\e90b";
+}
+.icon-home:before {
+  content: "\e90f";
 }

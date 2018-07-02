@@ -96,12 +96,13 @@ mark.gray-mark{
 }
 
 h1{
-    margin-bottom:1.5em;
-    color:#0698EA;
+    margin-bottom:1.1em;
+    /*color:#1D91ED;**/
+
 }
 
 h2{
-   margin-bottom:1em; 
+   margin-bottom:.9em; 
 }
 
 h3{
@@ -110,6 +111,11 @@ h3{
 
 h4{
     margin-bottom:1em;
+}
+.table td, .table th{
+
+    padding: 20px;
+    line-height: 1.5em;
 }
 
 .icon-pro:before {

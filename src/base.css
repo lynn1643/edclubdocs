@@ -249,6 +249,7 @@ p{
 
 .home-link {color: #4d4d4d; display: block; font-size: 16px; line-height: 2.2;}
 .home-link:hover {text-decoration: none; color: #1d91ed;}
+.home-link.active {font-weight: bold;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
 .article.active {opacity: 1;}
 

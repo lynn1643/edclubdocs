@@ -28,39 +28,30 @@ class MyRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             doc_body = "<h4>YAML Exception:</h4><p class='doc-warn'>%s</p>" % e
             menu = []
             
-        nav = []
         navbar = {}
-        def traverse_menu(menu, level=0):
+        def traverse_menu(menu):
             has_active = False
             for item in menu:
-                new_item = {
-                    'name': item['name'],
-                    'path': item['path'],
-                    'level': level
-                }
-                if 'icon' in item:
-                    new_item['icon'] = item['icon']
-                if self.path == "/docs/%s" % item['path']:  
-                    new_item['active'] = True
-                    navbar['current'] = self.path
+                item['path'] = "/docs/%s" % item['path']
+                item['active'] = ''
+                if self.path == item['path']:
+                    item['active'] = 'active'
+                    navbar['current'] = item
                     has_active = True
                 else:
                     if navbar.get('current'):
                         if not navbar.get('next'):
-                            navbar['next'] = "/docs/%s" % item['path']
+                            navbar['next'] = item['path']
                     else:
-                        navbar['prev']= "/docs/%s" % item['path']                
-                nav.append(new_item)
+                        navbar['prev'] = item['path']
                 if 'subtopics' in item:
-                    nav.append({'in': True})
-                    if traverse_menu(item['subtopics'], level+1):
-                        new_item['has_active'] = True                        
-                    nav.append({'out': True})
-
+                    if traverse_menu(item['subtopics']):
+                        item['active'] = 'active has-active'
+                        has_active = True
             return has_active
 
         traverse_menu(menu)
-        return Template(raw_template).render(doc_body=doc_body, navbar=navbar, nav=nav)
+        return Template(raw_template).render(doc_body=doc_body, navbar=navbar, menu=menu, EDC_SRC="/src/", EDC_DOCS="/docs/")
 
     def serve_doc(self):
         f = StringIO()

@@ -1,6 +1,6 @@
 # This is a sample of how to build the user-guide menu
 # Only main topics have icons
-- name: User Guide
+- name: User guide
   icon: user-guide
   path: user-guide/index.html
   summary: Learn how to set up and manage your account from A to Z
@@ -95,8 +95,8 @@
         - name: Grading suggestions
           path: user-guide/class-preparation/grading-suggestions.html 
 
-        - name: Tracking student progress
-          path: user-guide/class-preparation/tracking-student-progress.html
+        - name: Track student progress
+          path: user-guide/class-preparation/track-student-progress.html
 
         - name: Parent letter
           path: user-guide/class-preparation/parent-letter.html   
@@ -186,83 +186,86 @@
 
 - name: Student Management
   icon: student-management
-  path: user-guide/student-management/student-management.html
-  summary: Lean how to upload students, manage enrollments, and track student progress
+  path: student-management/student-management-index.html
+  summary: Learn how to upload students, manage enrollments, and track student progress
   subtopics:  
     - name: Student account setup
-      path: user-guide/student-management/student-account-setup/student-account-setup.html
+      path: student-management/student-account-setup/student-account-setup.html
       subtopics:
-        - name: Adding one student
-          path: user-guide/student-management/student-account-setup/add-one-student.html
+        - name: Add students
+          path: student-management/student-account-setup/add-students.html
 
-        - name: Adding multiple students
-          path: user-guide/class-student-setup/add-students.html
+        - name: Add many students
+          path: student-management/student-account-setup/add-many-students.html
 
-        - name: Enrolling students in classes
-          path: user-guide/student-management/student-account-setup/enroll-students.html
+        - name: Enroll students
+          path: student-management/student-account-setup/enroll-students.html
 
-        - name: Using class codes
-          path: user-guide/student-management/student-account-setup/class-codes.html
+        - name: Class codes
+          path: student-management/student-account-setup/class-codes.html
 
-    - name: Student information management
-      path: user-guide/student-management/student-info-management/student-info-management.html
+    - name: Student profile management
+      path: student-management/student-profile-management/student-profile-management.html
       subtopics:
-        - name: Exporting student list
-          path: user-guide/student-management/student-info-management/export-student-csv.html
+        - name: Export student csv
+          path: student-management/student-profile-management/export-student-csv.html
 
-        - name: Removing students
-          path: user-guide/student-management/student-info-management/remove-students.html
+        - name: Update student profiles
+          path: student-management/student-profile-management/update-student-profile.html
+        
+        - name: Remove students
+          path: student-management/student-profile-management/remove-students.html
 
-        - name: Moving students within your account
-          path: user-guide/student-management/student-info-management/change-student-school.html
+        - name: Change student's school
+          path: student-management/student-profile-management/change-students-school.html
 
-        - name: Moving students up one grade
-          path: user-guide/student-management/student-info-management/up-one-grade.html
+        - name: Promote students
+          path: student-management/student-profile-management/promote-students.html
 
     - name: Student login options
-      path: user-guide/student-management/student-login-options/student-login-options.html
+      path: student-management/student-login-options/student-login-options.html
       subtopics:
-        - name: Getting students logged in
-          path: user-guide/student-management/student-login-options/student-login.html
+        - name: Set up student logins
+          path: student-management/student-login-options/setup-student-logins.html
 
-        - name: Logging in with Google
-          path: user-guide/student-management/student-login-options/login-google.html
+        - name: Log in with Google
+          path: student-management/student-login-options/login-google.html
 
-        - name: Distributing student login instructions
-          path: user-guide/student-management/student-login-options/student-login-instructions.html
+        - name: Student login instructions
+          path: student-management/student-login-options/student-login-instructions.html
 
-        - name: Checking student login credentials
-          path: user-guide/student-management/student-settings/check-student-info.html
+        - name: Check student login info
+          path: student-management/student-login-options/check-student-login-info.html
 
     - name: Student settings
-      path: user-guide/student-management/student-settings/student-settings.html
+      path: student-management/student-settings/student-settings.html
       subtopics: 
-        - name: Changing student settings
-          path: user-guide/student-management/student-settings/change-student-settings.html
+        - name: Change student settings
+          path: student-management/student-settings/change-student-settings.html
 
         - name: Accessibility settings
-          path: user-guide/student-management/student-settings/accessibility-settings.html
+          path: student-management/student-settings/accessibility-settings.html
 
-        - name: Adjusting lesson difficulty
-          path: user-guide/student-management/student-settings/lesson-difficulty.html
+        - name: Lesson difficulty
+          path: student-management/student-settings/lesson-difficulty.html
 
-    - name: Tracking progress
-      path: user-guide/student-management/track-progress/tracking-progress.html
+    - name: Track progress
+      path: student-management/track-progress/track-progress-index.html
       subtopics:
-        - name: Changing time goals
-          path: user-guide/student-management/track-progress/time-goals.html
+        - name: Time goals
+          path: student-management/track-progress/time-goals.html
 
-        - name: Adjusting the minimum star requirements
-          path: user-guide/student-management/track-progress/minimum-stars.html
+        - name: Minimum star requirement
+          path: student-management/track-progress/minimum-star-requirement.html
 
-        - name: Managing the student view of the scoreboard
-          path: user-guide/student-management/track-progress/scoreboard-settings.html
+        - name: Scoreboard settings
+          path: student-management/track-progress/scoreboard-settings.html
 
-        - name: Understanding the results page
-          path: user-guide/student-management/track-progress/results-page.html
+        - name: Results page
+          path: student-management/track-progress/results-page.html
 
-        - name: Missing student progress
-          path: user-guide/student-management/track-progress/missing-progress.html
+        - name: Missing progress
+          path: student-management/track-progress/missing-progress.html
 
 - name: Reports
   icon: reports

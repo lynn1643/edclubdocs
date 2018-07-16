@@ -154,8 +154,9 @@ h4{
 /*.menu.active {border-left: solid 2px; orange; color: black;}*/
 .menu a {
     font-size: 14px;
-    padding: 6px 5px 6px 50px!important;
+    padding: 6px 5px 6px 50px;
     color: #333;
+    position: relative;
 }
 .menu a:hover {background-color: inherit!important; color: #1d91ed;} 
 
@@ -216,7 +217,12 @@ p{
   font-size: .8em;
 }
 
-#doc-sidemenu {position: absolute; padding-top: 25px; width: 25vw;}
+#doc-sidemenu {
+    position: sticky;
+    padding-top: 25px;
+    top: 0;
+}
+#doc-sidemenu .nav {width: 100%;}
 #doc-sidemenu.affix {top: 0; position: fixed;}
 #doc-sidemenu>.back-to-top {display: none;}
 #doc-sidemenu.affix>.back-to-top {display: block;}
@@ -224,10 +230,7 @@ p{
 
 .content-box {min-height: calc(100vh - 55px);}
 @media (min-width: 768px) {
-    .content-box {
-        margin-left: 5px;
-        border-left: solid 1px #e6e6e6;    
-    } 
+    .content-box {border-left: solid 1px #e6e6e6;} 
 }
 
 
@@ -239,7 +242,7 @@ p{
 .chapter-tile {
     display: inline-block; 
     width: 210px; 
-    margin: 17px;
+    margin: 20px;
     cursor: pointer;
     text-decoration: none;
     vertical-align: top;
@@ -247,7 +250,7 @@ p{
 }
 .chapter-tile:hover .home-icon {transform: scale(1.1);}
 
-.home-link {color: #4d4d4d; display: block; font-size: 16px; line-height: 2.2;}
+.home-link {color: #4d4d4d; display: block; font-size: 16px;}
 .home-link:hover {text-decoration: none; color: #1d91ed;}
 .home-link.active {font-weight: bold;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}

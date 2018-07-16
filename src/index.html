@@ -3,6 +3,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="/src/base.css" rel="stylesheet">
     <link href="/src/font-style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Montserrat:700|Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+	<style>
+		p {
+			font-family: "Roboto", "Times New Roman", Helvetica, Arial, sans-serif;
+			font-size: 15px;
+		}
+	</style>
 </head>
 <body>
     <header>
@@ -25,20 +32,23 @@
 
     <div class="container" style='padding-top: 40px;'>
         <div class="row">
-            <div class="col-md-4">
-				<div id="doc-sidemenu" class="hidden-xs nav d-none d-md-block" data-spy="affix" data-offset-top="55" data-offset-bottom="650">
-					<ul class="nav">
+            <div class="col-md-4 col-lg-3" style="padding: 0;">
+				<div id="doc-sidemenu" class="nav" data-spy="affix" data-offset-top="55" data-offset-bottom="650">
+					<ul class="nav flex-column">
+						<li class="menu level-0 nav-item">
+							<a class="nav-link" href="/edclubdocs"><i class="icon-home"></i>Home</a>
+						</li>
 						{% for chapter in menu %}
-							<li class="menu level-0 {{ chapter.active }}" style="position: relative; width: 100%; line-height: 2;">
-								<a href="{{ chapter.path }}"><i class="icon-{{ chapter.icon }}"></i>{{chapter.name}}</a>
+							<li class="menu level-0 nav-item {{ chapter.active }}">
+								<a class="nav-link" href="{{ chapter.path }}"><i class="icon-{{ chapter.icon }}"></i>{{chapter.name}}</a>
 								<ul class="nav">
 									{% for topic in chapter.subtopics %}
-										<li class="menu level-1 {{ topic.active }}"><a href="{{ topic.path }}">{{topic.name}}</a>
+										<li class="menu level-1 {{ topic.active }}"><a class="nav-link" href="{{ topic.path }}">{{topic.name}}</a>
 											{% if topic.subtopics %}
 												<ul class="nav">
 													<div class="line"></div>
 													{% for section in topic.subtopics %}
-														<li class="menu level-2 {{ section.active }}"><a href="{{ section.path }}">{{section.name}}</a></li>
+														<li class="menu level-2 {{ section.active }}"><a class="nav-link" href="{{ section.path }}">{{section.name}}</a></li>
 													{% endfor %}
 												</ul>
 											{% endif %}
@@ -50,40 +60,52 @@
 					</ul>
 				</div>
             </div>
-            <div class="col-md-8">
-				<div>
-					{% if navbar.prev %}<a href="{{ navbar.prev }}">&lt; Previous</a>{% endif %}
-					&nbsp;
-					{% if navbar.next %}<a href="{{ navbar.next }}" style="float: right">Next &gt;</a>{% endif %}
-				</div>
-				<div style="position: relative; height: 60px;">
-					<div style="z-index: 1; position: absolute; width: 100%; padding: 10px 0; background: white;">
-						<input class="form-control form-inline" placeholder="Search" onblur="onBlur()" oninput="onSearch(this)" type="text"/>
-						<img id="search-spinner" src="{{ EDC_SRC }}media/loading.gif" style="display: none; position: absolute; top: 25px; right: 10px; width: 30px"/>
-						<div id="search-results" style="display: none; padding: 10px 15px; background: #f5f5f5; margin-bottom: -10px; box-shadow: 0 5px 5px #333;"></div>
-					</div>	
-				</div>
-				<div>{{ doc_body }}</div>
 
-				{% if navbar.current and navbar.current.subtopics %}
-					<div class="edclubdocs-toc">
-						{% for topic in navbar.current.subtopics %}
-							{% if topic.subtopics %}
-								<div>
-									<h2>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h2>
-									{% for section in topic.subtopics %}
-										<h4><a href="{{ section.path }}">{{ section.name }}</a></h4>
+
+		
+            <div class="col-md-8 col-lg-9" style="padding: 0;">
+				<div class="content-box">
+	
+					<div class="row">
+						<div class="col-lg-2 col-md-1 col-sm-1 d-xs-none"></div>
+						<div class="col-lg-8 col-md-11 col-sm-11" style="padding-top: 30px;">
+							<div>
+								{% if navbar.prev %}<a href="{{ navbar.prev }}">&lt; Previous</a>{% endif %}
+								&nbsp;
+								{% if navbar.next %}<a href="{{ navbar.next }}" style="float: right">Next &gt;</a>{% endif %}
+							</div>
+							<div style="position: relative; height: 60px;">
+								<div style="z-index: 1; position: absolute; width: 100%; padding: 10px 0; background: white;">
+									<input class="form-control form-inline" placeholder="Search" onblur="onBlur()" oninput="onSearch(this)" type="text"/>
+									<img id="search-spinner" src="{{ EDC_SRC }}media/loading.gif" style="display: none; position: absolute; top: 25px; right: 10px; width: 30px"/>
+									<div id="search-results" style="display: none; padding: 10px 15px; background: #f5f5f5; margin-bottom: -10px; box-shadow: 0 5px 5px #333;"></div>
+								</div>	
+							</div>
+		
+							{{ doc_body }}
+	
+							{% if navbar.current and navbar.current.subtopics %}
+								<div class="edclubdocs-toc">
+									{% for topic in navbar.current.subtopics %}
+										{% if topic.subtopics %}
+											<div>
+												<h2>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h2>
+												{% for section in topic.subtopics %}
+													<h4><a href="{{ section.path }}">{{ section.name }}</a></h4>
+												{% endfor %}
+											</div>
+										{% else %}
+											<div>
+												<h3>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h3>
+											</div>
+										{% endif %}
 									{% endfor %}
 								</div>
-							{% else %}
-								<div>
-									<h3>*/ <a href="{{ topic.path }}"> {{ topic.name }}</a></h3>
-								</div>
 							{% endif %}
-						{% endfor %}
+						</div>
+						<div class="col-lg-2 d-md-none"></div>
 					</div>
-				{% endif %}
-			
+				</div>
 			</div>
         </div>
     </div>

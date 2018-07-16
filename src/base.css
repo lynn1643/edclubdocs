@@ -228,9 +228,9 @@ p{
 #doc-sidemenu.affix>.back-to-top {display: block;}
 #doc-sidemenu.affix-bottom {position: absolute;}
 
-.content-box {min-height: calc(100vh - 55px);}
+.content-box {min-height: calc(100vh - 55px); padding: 15px;}
 @media (min-width: 768px) {
-    .content-box {border-left: solid 1px #e6e6e6;} 
+    .content-box {padding: 0; border-left: solid 1px #e6e6e6;} 
 }
 
 

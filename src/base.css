@@ -177,7 +177,7 @@ h4{
     top: 13px;
     left: 60px;
     font-size: 1.7em;
-    line-height: 1em;
+    line-height: .7em;
     background: white;
     height: 9px;
 }
@@ -229,8 +229,12 @@ p{
 #doc-sidemenu.affix-bottom {position: absolute;}
 
 .content-box {min-height: calc(100vh - 55px); padding: 15px;}
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .content-box {padding: 0; border-left: solid 1px #e6e6e6;} 
+}
+.article-box {margin: 0;}
+@media screen and (min-width: 768px) {
+    .article-box {margin: 40px -25px;} 
 }
 
 
@@ -252,7 +256,7 @@ p{
 
 .home-link {color: #4d4d4d; display: block; font-size: 16px;}
 .home-link:hover {text-decoration: none; color: #1d91ed;}
-.home-link.active {font-weight: bold;}
+.home-link.active {background: #f1f1f1;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
 .article.active {opacity: 1;}
 

@@ -292,7 +292,7 @@
 
 - name: Resources
   icon: resources
-  path: faq/index.html
+  path: resources/resource-index.html
   summary: Check out lesson plans and helpful resources to help you teach keyboarding.
 
 - name: FAQ

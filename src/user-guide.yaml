@@ -3,7 +3,7 @@
 - name: User guide
   icon: user-guide
   path: user-guide/index.html
-  summary: Learn how to set up and manage your account from A to Z
+  summary: Learn how to create, set up, and manage your TypingClub account from A to Z.
   subtopics:  
     - name: Introduction
       path: user-guide/introduction.html
@@ -105,7 +105,7 @@
 - name: Class management
   icon: class-management
   path: class-management/index.html
-  summary: Learn how to create classes, manage rosters, and customize class settings  
+  summary: Learn how to create classes, manage rosters, and customize class settings.  
   subtopics:  
     - name: Class creation
       path: class-management/class-creation.html
@@ -184,10 +184,10 @@
         - name: Custom placement test
           path: class-management/typing-tests/custom-placement-test.html
 
-- name: Student Management
+- name: Student management
   icon: student-management
   path: student-management/student-management-index.html
-  summary: Learn how to upload students, manage enrollments, and track student progress
+  summary: Learn how to upload students, manage enrollments, and track student progress.
   subtopics:  
     - name: Student account setup
       path: student-management/student-account-setup/student-account-setup.html
@@ -270,7 +270,7 @@
 - name: Reports
   icon: reports
   path: reports/index.html
-  summary: Explore the reports, graphs, and charts available to help you assess student progress
+  summary: Explore the reports, graphs, and charts available to help you assess student progress.
   subtopics:  
     - name: Practice time
       path: reports/practice-time.html  
@@ -293,12 +293,12 @@
 - name: Resources
   icon: resources
   path: faq/index.html
-  summary: Check out lesson plans and helpful resources to help you teach keyboarding
+  summary: Check out lesson plans and helpful resources to help you teach keyboarding.
 
 - name: FAQ
   icon: faq
   path: faq/index.html
-  summary: Got a quick question? Explore the topics frequently discussed by other educators
+  summary: Got a quick question? Explore the topics frequently discussed by other teachers.
   subtopics:  
     - name: Licensing & Purchasing
       path: faq/licensing-purchasing.html

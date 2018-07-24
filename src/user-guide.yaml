@@ -190,7 +190,7 @@
   summary: Learn how to upload students, manage enrollments, and track student progress.
   subtopics:  
     - name: Student account setup
-      path: student-management/student-account-setup/student-account-setup.html
+      path: student-management/student-account-setup/student-account-setup-index.html
       subtopics:
         - name: Add students
           path: student-management/student-account-setup/add-students.html
@@ -205,7 +205,7 @@
           path: student-management/student-account-setup/class-codes.html
 
     - name: Student profile management
-      path: student-management/student-profile-management/student-profile-management.html
+      path: student-management/student-profile-management/student-profile-management-index.html
       subtopics:
         - name: Export student csv
           path: student-management/student-profile-management/export-student-csv.html
@@ -223,7 +223,7 @@
           path: student-management/student-profile-management/promote-students.html
 
     - name: Student login options
-      path: student-management/student-login-options/student-login-options.html
+      path: student-management/student-login-options/student-login-options-index.html
       subtopics:
         - name: Set up student logins
           path: student-management/student-login-options/setup-student-logins.html
@@ -238,7 +238,7 @@
           path: student-management/student-login-options/check-student-login-info.html
 
     - name: Student settings
-      path: student-management/student-settings/student-settings.html
+      path: student-management/student-settings/student-settings-index.html
       subtopics: 
         - name: Change student settings
           path: student-management/student-settings/change-student-settings.html

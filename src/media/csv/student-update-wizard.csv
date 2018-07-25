@@ -1,0 +1,4 @@
+First Name,Last Name,Student ID,Username,Password,TypingClub ID,Grade,Action,Comments
+John,Smith,1231,john,pass,10000001,2,add/update,"If this student exists, his info will get updated. Otherwise he will be added"
+Mary,Jones,1451,mary,pass,10000002,2,just-update,"If this student exists, her info will get updated."
+,,1881,,,,,delete,The student with ID 1881 will be removed

@@ -1,0 +1,2 @@
+class-id,instructor-id,school-id,name,description,grade,action
+1234-c,1234-t,1234-s,Typing Class,"In this class, students will learn how to type.",3,update

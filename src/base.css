@@ -219,8 +219,9 @@ p{
 
 #doc-sidemenu {
     position: sticky;
-    padding-top: 25px;
+    padding-top: 20px;
     top: 0;
+    z-index: 1;
 }
 #doc-sidemenu .nav {width: 100%;}
 #doc-sidemenu.affix {top: 0; position: fixed;}
@@ -239,14 +240,15 @@ p{
 
 
 *, h1, h2, h3, h4, h5, p {font-weight: 400;}
+h1, h2 {color: #444;}
 
 .sm-back-to-top {height: 0; overflow: hidden; background: #fdfdfd; }
 .sm-back-to-top.affix {display: block; height: inherit; padding: 10px; z-index: 1; border-bottom: solid 1px #ededed;}
 
 .chapter-tile {
     display: inline-block; 
-    width: 210px; 
-    margin: 20px;
+    width: 220px; 
+    margin: 15px;
     cursor: pointer;
     text-decoration: none;
     vertical-align: top;
@@ -254,13 +256,13 @@ p{
 }
 .chapter-tile:hover .home-icon {transform: scale(1.1);}
 
-.home-link {color: #4d4d4d; display: block; font-size: 16px;}
+.home-link {color: #4d4d4d; display: block; font-size: 16px; padding: 3px 10px;}
 .home-link:hover {text-decoration: none; color: #1d91ed;}
 .home-link.active {background: #f1f1f1;}
 .article { padding: 100px 0 50px; border-bottom: solid 1px #ededed;}
 .article.active {opacity: 1;}
 
-.search-no-results {color: #888; letter-spacing: .01em;}
+.search-no-results {color: #888; letter-spacing: .01em; padding: 10px;}
 
 .faq-list>p {display: none;}
 .faq-list>h5:hover {

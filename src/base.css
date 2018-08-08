@@ -247,7 +247,7 @@ h1, h2 {color: #444;}
 
 .chapter-tile {
     display: inline-block; 
-    width: 220px; 
+    width: 230px; 
     margin: 15px;
     cursor: pointer;
     text-decoration: none;

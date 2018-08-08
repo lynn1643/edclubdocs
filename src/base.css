@@ -119,6 +119,7 @@ h4{
 }
 
 .icon-pro:before {
+  display: inline-block;width:0;
   content: "\e902";
   margin-left: 6px;
   margin-right: 6px;
@@ -126,6 +127,7 @@ h4{
 }
 
 .icon-free:before {
+  display: inline-block;width:0;
   content: "\e900";
   color: #4d4d4d;
   margin-left: 6px;
@@ -135,6 +137,7 @@ h4{
 }
 
 .icon-new:before {
+  display: inline-block;width:0;
   content: "\e901";
   color: #0698ea;
   margin-left: 6px;
@@ -143,6 +146,7 @@ h4{
 }
 
 .icon-proplus:before {
+  display: inline-block;width:0;
   content: "\e903";
   color: #edb400;
    margin-left: 6px;
@@ -205,6 +209,7 @@ p{
     padding-top: 3px;
     padding-bottom: 3px;
     border-radius: 4px;
+    white-space: nowrap;
 }
 
 .li-exeption{

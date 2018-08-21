@@ -20,7 +20,13 @@ function callAjax(url, callback){
 var search_index;
 var search_tokens;
 
-function onBlur() {setTimeout(function(){searchResults.style.display = 'none';}, 100);}
+function onBlur() {
+    searchResults.style.opacity=0; 
+    setTimeout(function(){
+        searchResults.style.opacity=1; 
+        searchResults.style.display = 'none';
+    }, 500);
+}
 
 function onSearch(e) {
     var query = e.value;
@@ -105,7 +111,7 @@ function search(query) {
         for (var i in longest) {
             if (token_hist[longest[i]] == min_matches) {
                 var item = search_index.items[longest[i]];
-                if (res.length <= 14) res.push('<a class="home-link" href="/docs/' + item.p + '">'+ item.n + "</a>");
+                if (res.length <= 14) res.push('<a class="home-link" href="/docs/' + item.p + '" onmousedown="location=this.href;">'+ item.n + "</a>");
             }
         }
         min_matches--;

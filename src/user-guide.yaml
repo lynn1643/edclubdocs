@@ -135,6 +135,9 @@
         - name: Lesson plan dependency
           path: class-management/assignments/lesson-plan-dependency.html
 
+        - name: Reset lesson plan progress
+          path: class-management/assignments/reset-lesson-plan-progress.html
+
     - name: Class settings
       path: class-management/class-settings.html
       subtopics:
@@ -312,6 +315,8 @@
     - name: Back to school
       path: faq/back-to-school.html
 
+    - name: Glossary
+      path: faq/glossary.html
 
 
 

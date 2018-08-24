@@ -30,6 +30,9 @@
         - name: Manual vs. automatic setup
           path: user-guide/account-setup/manual-automatic-setup.html
 
+        - name: Clever settings
+          path: user-guide/account-setup/clever-settings.html
+
         - name: Chrome app
           path: user-guide/account-setup/chrome-app.html
 
@@ -63,6 +66,10 @@
       subtopics:
         - name: Add classes
           path: user-guide/class-student-setup/add-classes.html
+
+        - name: Class codes
+          path: user-guide/class-student-setup/class-codes.html
+
 
         - name: Manage lesson plans
           path: user-guide/class-student-setup/manage-lesson-plans.html  

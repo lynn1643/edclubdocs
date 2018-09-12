@@ -30,6 +30,9 @@
         - name: Manual vs. automatic setup
           path: user-guide/account-setup/manual-automatic-setup.html
 
+        - name: Account settings
+          path: user-guide/account-setup/account-settings.html
+
         - name: Clever settings
           path: user-guide/account-setup/clever-settings.html
 
@@ -80,7 +83,7 @@
         - name: Lesson types
           path: user-guide/class-student-setup/lesson-types.html  
 
-        - name: Adjust difficulty level
+        - name: Adjust class-wide difficulty level
           path: user-guide/class-student-setup/adjust-difficulty-level.html
 
         - name: Add students

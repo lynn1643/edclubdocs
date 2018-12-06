@@ -45,6 +45,9 @@
         - name: School code
           path: user-guide/account-setup/school-code.html           
 
+        - name: Foreign language setup
+          path: user-guide/account-setup/foreign-language-setup.html           
+
     - name: Teacher setup        
       path: user-guide/teacher-setup.html
       subtopics:
@@ -94,7 +97,6 @@
 
         - name: Transfer students between schools
           path: user-guide/class-student-setup/transfer-students-between-schools.html
-
 
     - name: Class preparation       
       path: user-guide/class-preparation.html
